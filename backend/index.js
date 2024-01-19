@@ -18,6 +18,29 @@ const PORT = process.env.PORT || 4000;
 app.use(express.json());
 app.use(cors()); //Fix the cross origin error
 
+const allowedOrigins = [
+  "https://work-out-buddy-seven.vercel.app",
+  "http://localhost:5173",
+];
+// middleware
+app.use(function (req, res, next) {
+  const origin = req.headers.origin;
+
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-Requested-With,content-type, authorization"
+  );
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  next();
+});
+
 app.use((req, res, next) => {
   console.log(req.path, req.method, req.url);
   next();
@@ -26,7 +49,7 @@ app.use((req, res, next) => {
 // Route handler
 
 app.use("/api/workouts", workoutRoutes);
-app.use('/api/user', userRoutes)
+app.use("/api/user", userRoutes);
 
 // app.get("/", (req, res) => {
 //   res.json({ mssg: "Welcome to the app" });
