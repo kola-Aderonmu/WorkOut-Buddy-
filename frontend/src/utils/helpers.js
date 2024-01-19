@@ -1,1 +1,3 @@
-export const backendUrl = "http://localhost:4000";
+export const backendUrl = "https://kind-puce-gosling-shoe.cyclic.app";
+
+// ("http://localhost:4000");
