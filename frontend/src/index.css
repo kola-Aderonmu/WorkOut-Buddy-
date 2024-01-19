@@ -1,0 +1,239 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+body {
+  background: #eed2d2;
+  margin: 0;
+  font-family: "Poppins";
+}
+header {
+  background: #fff;
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #ffff, #feb47b);
+}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+.pages {
+  max-width: 1400px;
+  margin: 0 auto;
+  /* border: 2px solid red; */
+}
+
+.workout-logo {
+  height: 150px;
+  width: auto;
+  border: none;
+  border-radius: 22px;
+}
+
+.workouts-logo-nav {
+  /* border: 2px solid red; */
+  display: flex;
+  gap: 30px;
+}
+
+.workouts-logo-nav h1 {
+  color: rgb(43, 41, 41);
+  margin-top: 70px;
+  font-family: "Atma", system-ui;
+  font-size: xxx-large;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animated-heading {
+  animation: fadeIn 1s ease-in-out; /* Adjust the duration and easing as needed */
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none; /* Hide scrollbar for better appearance */
+  -ms-overflow-style: none;
+}
+
+.carousel img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-right: 10px; /* Adjust spacing between images */
+}
+
+/* Optional: Add scrollbar styling */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* homepage */
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+  /* border: 2px dotted red; */
+}
+
+/* .workouts {
+  border: 3px solid green;
+} */
+.workout-details {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+.workout-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+.workout-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+.workout-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  /* background: #f1f1f1; */
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+
+/* new workout form */
+label,
+input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #5eec32;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  z-index: 1000;
+  max-width: 250px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal p {
+  margin: 0;
+  color: #333;
+  font-family: cursive;
+}
+
+/* Optional: Add a close button */
+.modal .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #999;
+  font-size: 12px;
+}
+
+/* navbar */
+nav {
+  display: flex;
+  align-items: center;
+  /* border: 2px solid red; */
+  /* box-shadow: rgba(67, 67, 70, 0.25) 0px 0px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 0px 36px -18px inset; */
+  border-radius: 12px;
+  padding: 8px;
+  font-family: atma;
+}
+nav a {
+  margin-left: 10px;
+}
+nav button {
+  background: #0a0808;
+  color: white;
+  /* border: 1px solid var(--primary); */
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 10px;
+}
+/* auth forms */
+form.signup,
+form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.material-symbols-outlined {
+  font-size: x-large;
+  /* border: 2px solid red; */
+  padding: 10px;
+  cursor: cell;
+
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
