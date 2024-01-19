@@ -133,7 +133,7 @@ const WorkoutDetails = ({ workout }) => {
             showStartNow={showStartNow}
           />
         </div>
-        <span className="space-x-4">
+        <span className="space-x-3 ">
           <div
             className="material-symbols-outlined cursor-pointer"
             onClick={handleEdit}

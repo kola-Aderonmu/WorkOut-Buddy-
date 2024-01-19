@@ -131,7 +131,7 @@ const NavBar = () => {
             </div>
           )}
           {!user && (
-            <div>
+            <div className="sm:text-red-800 mb-36 md:mb-0 lg:mb-0">
               <Link to="/login">Login</Link>
               <Link to="/signup">Signup</Link>
             </div>
