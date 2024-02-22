@@ -237,3 +237,34 @@ form.login {
 
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
+
+
+
+.individual-together-page {
+  background-color: black;
+  color: white;
+  height: 100vh; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+}
+
+.get-started-button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.get-started-button:hover {
+  background-color: darkblue;
+}

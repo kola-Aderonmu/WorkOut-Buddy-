@@ -8,6 +8,8 @@ import Signup from "./pages/Signup";
 import { useAuthContext } from "./hooks/useAuthContext";
 import AuthLayout from "./layout/AuthLayout";
 import { createContext, useState } from "react";
+import IndividualTogether from "./components/IndividualTogether";
+
 const AppContext = createContext();
 
 
@@ -16,7 +18,7 @@ function App() {
   const [workoutData, setWorkoutdata] = useState(null);
 
   return (
-    <AppContext.Provider value={{workoutData, setWorkoutdata}}>
+    <AppContext.Provider value={{ workoutData, setWorkoutdata }}>
       <div className="App">
         <BrowserRouter>
           <NavBar />
@@ -34,7 +36,15 @@ function App() {
                 path="/signup"
                 element={!user ? <Signup /> : <Navigate to="/" />}
               />
+              
             </Route>
+            
+            <Route
+                path="/option1"
+                element=
+                 <IndividualTogether />
+                
+              />
           </Routes>
         </BrowserRouter>
       </div>
