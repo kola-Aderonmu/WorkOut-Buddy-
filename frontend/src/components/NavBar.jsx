@@ -11,7 +11,6 @@ const items = [
   {
     label: "PROFILE",
     key: "0",
-    link: "https://www.calculator.net/calorie-calculator.html",
   },
   {
     key: "2",
