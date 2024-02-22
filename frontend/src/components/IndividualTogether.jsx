@@ -4,7 +4,7 @@ const IndividualTogether = () => {
   
      return (
        <div className="individual-together-page">
-         <h1 className="text-xl mb-20">Individual - Together</h1>
+         <h1 className="text-xl mb-20 font-extrabold">Individual - Together</h1>
          <div className="content">
            <h2>Team up for your health</h2>
            <p>
